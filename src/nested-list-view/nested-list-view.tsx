@@ -25,6 +25,7 @@ const NestedListView: React.FC<IProps> = React.memo(
     extraData,
     keepOpenedState,
     initialNumToRender,
+    containerStyle = {},
   }: IProps) => {
     const generateIds = useCallback(
       (node?: Node) => {
@@ -130,16 +131,18 @@ const NestedListView: React.FC<IProps> = React.memo(
 
     return (
       <NodeProvider>
-        <NodeView
-          getChildrenName={_getChildrenName}
-          node={_root}
-          onNodePressed={onNodePressed}
-          level={0}
-          renderNode={renderNode}
-          extraData={extraData}
-          keepOpenedState={keepOpenedState}
-          initialNumToRender={initialNumToRender}
-        />
+        <View style={[styles.container, containerStyle]}>
+          <NodeView
+            getChildrenName={_getChildrenName}
+            node={_root}
+            onNodePressed={onNodePressed}
+            level={0}
+            renderNode={renderNode}
+            extraData={extraData}
+            keepOpenedState={keepOpenedState}
+            initialNumToRender={initialNumToRender}
+          />
+        </View>
       </NodeProvider>
     );
   },
