@@ -1,6 +1,6 @@
 {
   "name": "@dplus/rn-tree",
-  "version": "0.14.4",
+  "version": "0.14.5",
   "description": "Tree for React native",
   "main": "src/index.ts",
   "types": "src/index.ts",
