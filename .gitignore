@@ -1,0 +1,14 @@
+
+coverage/
+
+# TypeScript
+#
+lib/
+
+# Jest
+#
+.jest/
+
+dist/
+node_modules
+yarn-error.log
