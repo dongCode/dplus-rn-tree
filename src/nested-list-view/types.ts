@@ -1,6 +1,6 @@
 import { ReactElement } from 'react';
 import { Node } from '../node-view';
-import { StyleSheet } from 'react-native';
+import { StyleSheet, ViewStyle } from 'react-native';
 
 export interface IProps {
   data: any;
@@ -11,4 +11,5 @@ export interface IProps {
   style?: StyleSheet;
   keepOpenedState?: boolean;
   initialNumToRender?: number;
+  containerStyle?: ViewStyle;
 }

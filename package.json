@@ -4,6 +4,9 @@
   "description": "Tree for React native",
   "main": "src/index.ts",
   "types": "src/index.ts",
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "test": "jest",
     "test-coverage": "jest && codecov",
@@ -18,7 +21,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/fjmorant/react-native-nested-listview.git"
+    "url": "git+https://github.com/dongCode/dplus-rn-tree.git"
   },
   "dependencies": {
   },
@@ -66,9 +69,9 @@
   "author": "Javier Morant",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/fjmorant/react-native-nested-listview/issues"
+    "url": "https://github.com/dongCode/dplus-rn-tree/issues"
   },
-  "homepage": "https://github.com/fjmorant/react-native-nested-listview#readme",
+  "homepage": "https://github.com/dongCode/dplus-rn-tree#readme",
   "jest": {
     "preset": "react-native",
     "setupFilesAfterEnv": [
