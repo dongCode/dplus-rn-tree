@@ -12,8 +12,7 @@ const generatedTreeData = (
   });
 
   data.forEach((item: any) => {
-    if (item[parentKey] !== 0 && item[idKey] !== 0) {
-      item.parent = storeMap[item[parentKey]];
+    if (item[parentKey] && item[parentKey] !== 0 && item[idKey] !== 0) {
       storeMap[item[parentKey]].items.push(item);
     } else {
       arr.push(item);
