@@ -2,7 +2,6 @@ import React, { useCallback, useEffect, useState } from 'react';
 import { Text, View } from 'react-native';
 import { Node, NodeView } from '../node-view';
 import { NodeProvider } from '../nodes-context-provider';
-import { uniqueId } from '../utils';
 import styles from './styles';
 import { IProps } from './types';
 
@@ -15,6 +14,8 @@ const defaultRootNode = {
   opened: true,
   hidden: true,
 } as Node;
+
+let uniqueId = 1;
 
 const NestedListView: React.FC<IProps> = React.memo(
   ({
@@ -58,7 +59,7 @@ const NestedListView: React.FC<IProps> = React.memo(
           delete copyNode._internalId;
         }
 
-        copyNode._internalId = uniqueId('$$tree_node_id_');
+        copyNode._internalId = `$$tree_node_id_${uniqueId++}`;
 
         return copyNode;
       },
