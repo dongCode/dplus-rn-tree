@@ -27,11 +27,11 @@ UI component for React Native that allows to create a listview with N levels of 
 ## Usage
 
 ```
-yarn add react-native-nested-listview
+yarn add @dplus/rn-tree
 ```
 
 ```javascript
-import NestedListView, {NestedRow} from 'react-native-nested-listview'
+import NestedListView, {NestedRow} from '@dplus/rn-tree'
 
 const data = [{title: 'Node 1', items: [{title: 'Node 1.1'}, {title: 'Node 1.2'}]}]
 
